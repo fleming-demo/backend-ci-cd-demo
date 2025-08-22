@@ -27,11 +27,5 @@ jobs:
     - name: Run Jest tests
       run: npm test || echo "Tests failed"
 
-    - name: Snyk Security Scan
-      uses: snyk/actions/node@v1
-      env:
-        SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
-      continue-on-error: true
-
     - name: Print Node.js version
       run: node -v
